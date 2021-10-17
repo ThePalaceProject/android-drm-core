@@ -19,7 +19,7 @@ android-drm-core
 Add a dependency on the core API:
 
 ```
-implementation "org.librarysimplified.drm:org.librarysimplified.drm.core:1.1.0"
+implementation "org.thepalaceproject.drm:org.librarysimplified.drm.core:1.1.0"
 ```
 
 ### Compilation
