@@ -1,9 +1,9 @@
 android-drm-core
 =====================
 
-[![Build Status](https://img.shields.io/github/workflow/status/NYPL-Simplified/android-drm-core/Android%20CI%20(Authenticated)?style=flat-square)](https://github.com/NYPL-Simplified/android-drm-core/actions?query=workflow%3A%22Android+CI+%28Authenticated%29%22)
-[![Maven Central](https://img.shields.io/maven-central/v/org.librarysimplified.drm/org.librarysimplified.drm.core?style=flat-square)](https://repo1.maven.org/maven2/org/librarysimplified/drm/)
-[![Maven Central (snapshot)](https://img.shields.io/nexus/s/https/oss.sonatype.org/org.librarysimplified.drm/org.librarysimplified.drm.core.svg?style=flat-square)](https://oss.sonatype.org/content/repositories/snapshots/org.librarysimplified.drm/)
+[![Build Status](https://img.shields.io/github/workflow/status/ThePalaceProject/android-drm-core/Android%20CI%20(Authenticated)?style=flat-square)](https://github.com/ThePalaceProject/android-drm-core/actions?query=workflow%3A%22Android+CI+%28Authenticated%29%22)
+[![Maven Central](https://img.shields.io/maven-central/v/org.thepalaceproject.drm/org.librarysimplified.drm.core?style=flat-square)](https://repo1.maven.org/maven2/org/thepalaceproject/drm/)
+[![Maven Central (snapshot)](https://img.shields.io/nexus/s/https/oss.sonatype.org/org.thepalaceproject.drm/org.librarysimplified.drm.core.svg?style=flat-square)](https://oss.sonatype.org/content/repositories/snapshots/org.thepalaceproject.drm/)
 
 ![drm](./src/site/resources/drm.jpg?raw=true)
 
