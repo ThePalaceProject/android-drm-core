@@ -36,7 +36,7 @@ plugins {
 
 ext {
   androidBuildToolsVersion = "30.0.2"
-  androidCompileSDKVersion = 28
+  androidCompileSDKVersion = 31
   androidMinimumSDKVersion = 21
   androidTargetSDKVersion = 28
 
@@ -215,7 +215,7 @@ Automatic-Module-Name: ${POM_AUTOMATIC_MODULE_NAME}
 
     // Sonatype snapshots
     maven {
-      url "https://oss.sonatype.org/content/repositories/snapshots/"
+      url "https://s01.oss.sonatype.org/content/repositories/snapshots/"
     }
 
     maven { url "https://jitpack.io" }

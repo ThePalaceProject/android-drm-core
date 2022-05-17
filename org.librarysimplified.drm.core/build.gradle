@@ -5,6 +5,6 @@ dependencies {
   implementation libs.androidx.core.ktx
   implementation libs.kotlin.stdlib
   implementation libs.r2.shared
-  implementation libs.nypl.http.api
+  implementation libs.palace.http.api
 }
 
