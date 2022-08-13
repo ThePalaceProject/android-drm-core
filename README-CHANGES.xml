@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <c:changelog project="org.thepalaceproject.drm" xmlns:c="urn:com.io7m.changelog:4.0">
   <c:releases>
-    <c:release date="2022-08-13T06:18:54+00:00" is-open="true" ticket-system="org.nypl.jira" version="1.2.6">
+    <c:release date="2022-08-13T06:25:14+00:00" is-open="false" ticket-system="org.nypl.jira" version="1.2.6">
       <c:changes>
-        <c:change date="2022-08-13T06:18:54+00:00" summary="Replaced nypl http module with palace fork."/>
+        <c:change date="2022-08-13T00:00:00+00:00" summary="Replaced nypl http module with palace fork."/>
       </c:changes>
     </c:release>
   </c:releases>
