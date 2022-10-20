@@ -6,8 +6,10 @@
         <c:change date="2022-08-13T00:00:00+00:00" summary="Replaced nypl http module with palace fork."/>
       </c:changes>
     </c:release>
-    <c:release date="2022-08-13T06:28:23+00:00" is-open="true" ticket-system="org.nypl.jira" version="1.2.7">
-      <c:changes/>
+    <c:release date="2022-10-20T05:46:45+00:00" is-open="true" ticket-system="org.nypl.jira" version="1.2.7">
+      <c:changes>
+        <c:change date="2022-10-20T05:46:45+00:00" summary="Changed target version to Android 12."/>
+      </c:changes>
     </c:release>
   </c:releases>
   <c:ticket-systems>
