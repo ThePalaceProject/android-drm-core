@@ -24,6 +24,12 @@ object AdobeAdeptAssets {
   const val RIGHTS_PATH = "/META-INF/rights.xml"
 
   /**
+   * The path at which the encryption descriptor can be found.
+   */
+
+  const val ENCRYPTION_PATH = "/META-INF/encryption.xml"
+
+  /**
    * Open an encrypted EPUB as an asset.
    */
 
