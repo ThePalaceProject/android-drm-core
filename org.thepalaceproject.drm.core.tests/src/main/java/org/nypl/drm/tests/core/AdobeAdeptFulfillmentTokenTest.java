@@ -2,7 +2,7 @@ package org.nypl.drm.tests.core;
 
 import junit.framework.Assert;
 
-import org.thepalaceproject.drm.core.AdobeAdeptFulfillmentToken;
+import org.nypl.drm.core.AdobeAdeptFulfillmentToken;
 
 import java.io.InputStream;
 

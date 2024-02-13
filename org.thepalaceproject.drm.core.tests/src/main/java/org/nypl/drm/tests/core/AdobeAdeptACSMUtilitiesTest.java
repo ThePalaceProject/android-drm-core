@@ -2,7 +2,7 @@ package org.nypl.drm.tests.core;
 
 import junit.framework.Assert;
 
-import org.thepalaceproject.drm.core.AdobeAdeptACSMUtilities;
+import org.nypl.drm.core.AdobeAdeptACSMUtilities;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
