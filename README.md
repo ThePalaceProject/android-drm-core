@@ -1,25 +1,18 @@
 android-drm-core
 =====================
 
-[![Build Status](https://img.shields.io/github/workflow/status/ThePalaceProject/android-drm-core/Android%20CI%20(Authenticated)?style=flat-square)](https://github.com/ThePalaceProject/android-drm-core/actions?query=workflow%3A%22Android+CI+%28Authenticated%29%22)
-[![Maven Central](https://img.shields.io/maven-central/v/org.thepalaceproject.drm/org.librarysimplified.drm.core?style=flat-square)](https://repo1.maven.org/maven2/org/thepalaceproject/drm/)
-[![Maven Central (snapshot)](https://img.shields.io/nexus/s/https/oss.sonatype.org/org.thepalaceproject.drm/org.librarysimplified.drm.core.svg?style=flat-square)](https://oss.sonatype.org/content/repositories/snapshots/org.thepalaceproject.drm/)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/ThePalaceProject/android-drm-core/android-main.yml)](https://github.com/ThePalaceProject/android-drm-core/blob/main/.github/workflows/android-main.yml)
+[![Maven Central](https://img.shields.io/maven-central/v/org.thepalaceproject.drm/org.thepalaceproject.drm.core?style=flat-square)](https://repo1.maven.org/maven2/org/thepalaceproject/r2/)
+[![Maven Central (snapshot)](https://img.shields.io/nexus/s/https/s01.oss.sonatype.org/org.thepalaceproject.drm/org.thepalaceproject.drm.core.svg?style=flat-square)](https://s01.oss.sonatype.org/content/repositories/snapshots/org/thepalaceproject/drm/org.thepalaceproject.drm.core/)
 
 ![drm](./src/site/resources/drm.jpg?raw=true)
-
-|Build|Status|
-|-----|------|
-|[Nightly, Authenticated, JDK 11](https://github.com/ThePalaceProject/android-drm-core/actions?query=workflow%3A%22Android+CI+%28Daily+Authenticated%2C+JDK+11%29%22)|[![Build Status](https://img.shields.io/github/workflow/status/ThePalaceProject/android-drm-core/Android%20CI%20(Daily%20Authenticated,%20JDK%2011)?style=flat-square)](https://github.com/ThePalaceProject/android-drm-core/actions?query=workflow%3A%22Android+CI+%28Daily+Authenticated%2C+JDK+11%29%22)|
-|[Nightly, Unauthenticated, JDK 11](https://github.com/ThePalaceProject/android-drm-core/actions?query=workflow%3A%22Android+CI+%28Daily+Unauthenticated%2C+JDK+11%29%22)|[![Build Status](https://img.shields.io/github/workflow/status/ThePalaceProject/android-drm-core/Android%20CI%20(Daily%20Unauthenticated,%20JDK%2011)?style=flat-square)](https://github.com/ThePalaceProject/android-drm-core/actions?query=workflow%3A%22Android+CI+%28Daily+Unauthenticated%2C+JDK+11%29%22)|
-|[Nightly, Unauthenticated, JDK 15](https://github.com/ThePalaceProject/android-drm-core/actions?query=workflow%3A%22Android+CI+%28Daily+Unauthenticated%2C+JDK+15%29%22)|[![Build Status](https://img.shields.io/github/workflow/status/ThePalaceProject/android-drm-core/Android%20CI%20(Daily%20Unauthenticated,%20JDK%2015)?style=flat-square)](https://github.com/ThePalaceProject/android-drm-core/actions?query=workflow%3A%22Android+CI+%28Daily+Unauthenticated%2C+JDK+15%29%22)|
-|[Last Commit](https://github.com/ThePalaceProject/android-drm-core/actions?query=workflow%3A%22Android+CI+%28Authenticated%29%22)|[![Build Status](https://img.shields.io/github/workflow/status/ThePalaceProject/android-drm-core/Android%20CI%20(Authenticated)?style=flat-square)](https://github.com/ThePalaceProject/android-drm-core/actions?query=workflow%3A%22Android+CI+%28Authenticated%29%22)|
 
 ### Usage
 
 Add a dependency on the core API:
 
 ```
-implementation "org.thepalaceproject.drm:org.librarysimplified.drm.core:1.1.0"
+implementation "org.thepalaceproject.drm:org.thepalaceproject.drm.core:2.0.0"
 ```
 
 ### Compilation
@@ -56,8 +49,8 @@ $ ./gradlew clean assemble test publishToMavenLocal
 
 |Module|Description|
 |------|-----------|
-| [org.librarysimplified.drm.core](https://github.com/ThePalaceProject/android-drm-core/tree/develop/org.librarysimplified.drm.core) | Core API
-| [org.librarysimplified.drm.core.tests](https://github.com/ThePalaceProject/android-drm-core/tree/develop/org.librarysimplified.drm.core.tests) | Unit tests
+| [org.thepalaceproject.drm.core](https://github.com/ThePalaceProject/android-drm-core/tree/develop/org.thepalaceproject.drm.core) | Core API
+| [org.thepalaceproject.drm.core.tests](https://github.com/ThePalaceProject/android-drm-core/tree/develop/org.thepalaceproject.drm.core.tests) | Unit tests
 
 ### License
 
