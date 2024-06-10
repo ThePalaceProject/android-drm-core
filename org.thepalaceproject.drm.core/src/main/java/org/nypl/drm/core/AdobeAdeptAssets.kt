@@ -4,7 +4,6 @@ import org.readium.r2.shared.util.Url
 import org.readium.r2.shared.util.asset.ContainerAsset
 import org.readium.r2.shared.util.data.CompositeContainer
 import org.readium.r2.shared.util.file.FileResource
-import org.readium.r2.shared.util.format.AdeptSpecification
 import org.readium.r2.shared.util.format.Format
 import org.readium.r2.shared.util.format.FormatSpecification
 import org.readium.r2.shared.util.format.Specification
@@ -61,7 +60,7 @@ object AdobeAdeptAssets {
 
     val specifications = mutableSetOf<Specification>()
     specifications.addAll(epubAsset.format.specification.specifications)
-    specifications.add(AdeptSpecification)
+    specifications.add(Specification.Adept)
 
     val formatSpecification =
       FormatSpecification(epubAsset.format.specification.specifications)
