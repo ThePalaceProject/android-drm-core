@@ -591,6 +591,7 @@ allprojects {
                 encoding = "UTF-8"
                 sourceCompatibility = JavaVersion.toVersion(jdkBytecodeTarget)
                 targetCompatibility = JavaVersion.toVersion(jdkBytecodeTarget)
+                isCoreLibraryDesugaringEnabled = true
             }
         }
 
@@ -646,6 +647,7 @@ allprojects {
                 encoding = "UTF-8"
                 sourceCompatibility = JavaVersion.toVersion(jdkBytecodeTarget)
                 targetCompatibility = JavaVersion.toVersion(jdkBytecodeTarget)
+                isCoreLibraryDesugaringEnabled = true
             }
 
             android.testOptions {
@@ -766,6 +768,7 @@ allprojects {
         "androidTestReleaseImplementation",
         "androidTestReleaseImplementationDependenciesMetadata",
         "annotationProcessor",
+        "coreLibraryDesugaring",
         "debugAndroidTestCompilationImplementation",
         "debugAndroidTestImplementation",
         "debugAndroidTestImplementationDependenciesMetadata",
