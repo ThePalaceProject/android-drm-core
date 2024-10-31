@@ -1,4 +1,6 @@
 dependencies {
+    coreLibraryDesugaring(libs.android.desugaring)
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.io7m.junreachable)
     implementation(libs.kotlin.stdlib)
