@@ -1,19 +1,27 @@
 package org.nypl.drm.core
 
 import java.io.File
-import javax.crypto.SecretKey
+import java.security.KeyPair
+import java.time.OffsetDateTime
 
 interface BoundlessServiceType : DRMServiceType {
 
   /**
    * Create a Readium content protection filter for the given book, using the given
-   * temporary directory for large resources, and the given secret key for decryption.
+   * temporary directory for large resources.
    */
 
   fun createContentProtection(
     epubFile: File,
+    licenseFile: File,
     tempDirectory: File,
-    contentKey: SecretKey,
-    inMemorySizeThreshold: ULong
+    inMemorySizeThreshold: ULong,
+    currentTime: OffsetDateTime = OffsetDateTime.now()
   ): ContentProtectionCloseableType
+
+  /**
+   * Get access to the keypair that will be used for DRM operations.
+   */
+
+  fun keyPair(): KeyPair
 }
