@@ -3,6 +3,7 @@ package org.nypl.drm.core
 import java.io.File
 import java.security.KeyPair
 import java.time.OffsetDateTime
+import java.util.UUID
 
 interface BoundlessServiceType : DRMServiceType {
 
@@ -24,4 +25,10 @@ interface BoundlessServiceType : DRMServiceType {
    */
 
   fun keyPair(): KeyPair
+
+  /**
+   * Get the device UUID.
+   */
+
+  fun deviceID(): UUID
 }
