@@ -10,7 +10,7 @@ class DRMTask private constructor(
 ) {
 
   inner class DRMStep internal constructor(
-    private val message: String,
+    val message: String,
     private var failedProp: Throwable?
   ) {
     val failed: Throwable?
