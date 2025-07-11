@@ -9,4 +9,5 @@ dependencies {
     implementation(libs.palace.http.uri)
     implementation(libs.r2.shared)
     implementation(libs.slf4j)
+    implementation(libs.stduritemplate)
 }

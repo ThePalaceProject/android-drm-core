@@ -1,6 +1,6 @@
 package org.nypl.drm.core
 
-import org.librarysimplified.http.uri_builder.LSHTTPURIQueryBuilder
+import io.github.stduritemplate.StdUriTemplate
 import java.math.BigInteger
 import java.net.URI
 import java.util.UUID
@@ -10,7 +10,7 @@ import java.util.UUID
  */
 
 data class BoundlessCMTemplatedLink(
-  val baseURI: URI
+  val templatedURI: String
 ) {
 
   fun evaluate(
@@ -18,18 +18,14 @@ data class BoundlessCMTemplatedLink(
     exponent: BigInteger,
     deviceID: UUID
   ): URI {
-    return LSHTTPURIQueryBuilder.encodeQuery(
-      URI(
-        this.baseURI.getScheme(),
-        this.baseURI.getAuthority(),
-        this.baseURI.getPath(),
-        null,
-        null
-      ),
-      sortedMapOf(
-        Pair("modulus", BoundlessJWK.encodeInteger(modulus)),
-        Pair("exponent", BoundlessJWK.encodeInteger(exponent)),
-        Pair("device_id", deviceID.toString())
+    return URI.create(
+      StdUriTemplate.expand(
+        this.templatedURI,
+        mapOf(
+          Pair("modulus", BoundlessJWK.encodeInteger(modulus)),
+          Pair("exponent", BoundlessJWK.encodeInteger(exponent)),
+          Pair("device_id", deviceID.toString())
+        )
       )
     )
   }

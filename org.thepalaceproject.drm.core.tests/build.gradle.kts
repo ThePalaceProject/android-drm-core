@@ -75,6 +75,7 @@ val dependencyObjects = listOf(
     libs.robolectric.utils,
     libs.robolectric.utils.reflector,
     libs.slf4j,
+    libs.stduritemplate,
     libs.woodstock.stax,
     project(":org.thepalaceproject.drm.core"),
 )
