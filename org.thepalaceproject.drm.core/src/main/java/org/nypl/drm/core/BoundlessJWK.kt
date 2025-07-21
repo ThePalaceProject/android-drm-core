@@ -16,12 +16,32 @@ object BoundlessJWK {
   private val base64Dec =
     Base64.getDecoder()
 
+  private fun toUnsignedByteArray(
+    value: BigInteger
+  ): ByteArray {
+    val unsigned = value.abs().toByteArray()
+    if (unsigned.size > 1 && unsigned[0].toInt() == 0x00) {
+      val tmp = ByteArray(unsigned.size - 1)
+      System.arraycopy(unsigned, 1, tmp, 0, tmp.size)
+      return tmp
+    }
+    return unsigned
+  }
+
+  private fun fromUnsignedByteArray(
+    data: ByteArray
+  ): BigInteger {
+    val extended = ByteArray(data.size + 1)
+    System.arraycopy(data, 0, extended, 1, data.size)
+    return BigInteger(extended)
+  }
+
   fun encodeInteger(x: BigInteger): String {
-    return encode(x.toByteArray())
+    return this.encode(this.toUnsignedByteArray(x))
   }
 
   fun decodeInteger(s: String): BigInteger {
-    return BigInteger(decode(s))
+    return this.fromUnsignedByteArray(this.decode(s))
   }
 
   fun encode(

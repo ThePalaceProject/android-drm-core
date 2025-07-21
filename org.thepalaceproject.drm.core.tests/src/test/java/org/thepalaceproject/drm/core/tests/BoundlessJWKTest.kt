@@ -12,6 +12,6 @@ class BoundlessJWKTest {
   fun testEncodeDecode(@ForAll x: BigInteger) {
     val s = BoundlessJWK.encodeInteger(x)
     val y = BoundlessJWK.decodeInteger(s)
-    Assert.assertEquals(x, y)
+    Assert.assertEquals(x.abs(), y)
   }
 }

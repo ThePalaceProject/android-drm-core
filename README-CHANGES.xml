@@ -23,10 +23,15 @@
     <c:release date="2024-11-18T00:00:00+00:00" is-open="false" ticket-system="org.lyrasis.jira" version="2.2.0">
       <c:changes/>
     </c:release>
-    <c:release date="2025-07-04T12:45:16+00:00" is-open="true" ticket-system="org.lyrasis.jira" version="3.0.0">
+    <c:release date="2025-07-21T00:00:00+00:00" is-open="false" ticket-system="org.lyrasis.jira" version="3.0.0">
       <c:changes>
         <c:change compatible="false" date="2025-07-04T00:00:00+00:00" summary="Remove AxisNow support."/>
-        <c:change date="2025-07-04T12:45:16+00:00" summary="Add Boundless DRM interface types."/>
+        <c:change date="2025-07-04T00:00:00+00:00" summary="Add Boundless DRM interface types."/>
+      </c:changes>
+    </c:release>
+    <c:release date="2025-07-21T12:02:27+00:00" is-open="true" ticket-system="org.lyrasis.jira" version="3.0.1">
+      <c:changes>
+        <c:change date="2025-07-21T12:02:27+00:00" summary="Fix exponent/modulus serialization for Boundless."/>
       </c:changes>
     </c:release>
   </c:releases>
