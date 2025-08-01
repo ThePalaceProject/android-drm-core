@@ -1,7 +1,5 @@
 package org.nypl.drm.core;
 
-import java.util.Objects;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -12,11 +10,21 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.ProtocolException;
 import java.net.URL;
+import java.security.KeyManagementException;
+import java.security.NoSuchAlgorithmException;
+import java.security.cert.X509Certificate;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
+
+import javax.net.ssl.HostnameVerifier;
+import javax.net.ssl.HttpsURLConnection;
+import javax.net.ssl.SSLContext;
+import javax.net.ssl.SSLSession;
+import javax.net.ssl.X509TrustManager;
 
 /**
  * The default implementation of the {@link AdobeAdeptNetProviderType}
@@ -56,6 +64,44 @@ public final class AdobeAdeptNetProvider
     return new AdobeAdeptNetProvider(in_user_agent);
   }
 
+  private static final class TrustBlindly implements X509TrustManager {
+    TrustBlindly() {
+
+    }
+
+    @Override
+    public void checkClientTrusted(
+      final X509Certificate[] chain,
+      final String authType) {
+
+    }
+
+    @Override
+    public void checkServerTrusted(
+      final X509Certificate[] chain,
+      final String authType) {
+
+    }
+
+    @Override
+    public X509Certificate[] getAcceptedIssuers() {
+      return new X509Certificate[0];
+    }
+  }
+
+  private static final class VerifyAnyone implements HostnameVerifier {
+    VerifyAnyone() {
+
+    }
+
+    @Override
+    public boolean verify(
+      final String hostname,
+      final SSLSession session) {
+      return true;
+    }
+  }
+
   @Override
   public AdobeAdeptStreamType newStream(
     final String method,
@@ -80,9 +126,27 @@ public final class AdobeAdeptNetProvider
     }
 
     try {
-      final URL url = Objects.requireNonNull(new URL(url_text));
+      final URL url =
+        Objects.requireNonNull(new URL(url_text));
       final HttpURLConnection conn =
         Objects.requireNonNull((HttpURLConnection) url.openConnection());
+
+      if (conn instanceof HttpsURLConnection) {
+        try {
+          final X509TrustManager[] trustAll = new X509TrustManager[1];
+          trustAll[0] = new TrustBlindly();
+
+          final SSLContext sc = SSLContext.getInstance("SSL");
+          sc.init(null, trustAll, new java.security.SecureRandom());
+          HttpsURLConnection.setDefaultSSLSocketFactory(sc.getSocketFactory());
+
+          final HttpsURLConnection conns = (HttpsURLConnection) conn;
+          conns.setSSLSocketFactory(sc.getSocketFactory());
+          conns.setHostnameVerifier(new VerifyAnyone());
+        } catch (final Throwable e) {
+          LOG.debug("Failed to set up blind trust for https: ", e);
+        }
+      }
 
       conn.setInstanceFollowRedirects(true);
       conn.setRequestMethod(method);
