@@ -34,9 +34,9 @@
         <c:change date="2025-07-21T00:00:00+00:00" summary="Fix exponent/modulus serialization for Boundless."/>
       </c:changes>
     </c:release>
-    <c:release date="2025-08-01T08:29:44+00:00" is-open="true" ticket-system="org.lyrasis.jira" version="3.2.0">
+    <c:release date="2025-08-01T08:32:51+00:00" is-open="false" ticket-system="org.lyrasis.jira" version="3.2.0">
       <c:changes>
-        <c:change date="2025-08-01T08:29:44+00:00" summary="Disable security for Adobe server connections."/>
+        <c:change date="2025-08-01T00:00:00+00:00" summary="Disable security for Adobe server connections."/>
       </c:changes>
     </c:release>
   </c:releases>
