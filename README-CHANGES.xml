@@ -39,9 +39,9 @@
         <c:change date="2025-08-01T00:00:00+00:00" summary="Disable security for Adobe server connections."/>
       </c:changes>
     </c:release>
-    <c:release date="2025-09-05T12:41:29+00:00" is-open="true" ticket-system="org.lyrasis.jira" version="3.3.0">
+    <c:release date="2025-09-05T12:54:13+00:00" is-open="false" ticket-system="org.lyrasis.jira" version="3.3.0">
       <c:changes>
-        <c:change date="2025-09-05T12:41:29+00:00" summary="Upgrade Kotlin and platform dependencies."/>
+        <c:change date="2025-09-05T00:00:00+00:00" summary="Upgrade Kotlin and platform dependencies."/>
       </c:changes>
     </c:release>
   </c:releases>
