@@ -79,6 +79,30 @@ public interface AdobeAdeptConnectorType
   void discardDeviceActivations();
 
   /**
+   * Set the current device activations.
+   *
+   * Note: This is a dangerous method that's used to set the raw bytes of the current device
+   * activations. The bytes are supposed to represent a serialized XML file. Needless to say,
+   * this has the potential to completely destroy the state of the connector in a way that
+   * can't necessarily be reset even with discardDeviceActivations().
+   */
+
+  void setDeviceActivations(byte[] data);
+
+  /**
+   * Delete an activation with the given details for the current device. Note: This does not
+   * actually delete the deactivation from the perspective of Adobe, so the deleted activation
+   * will still count towards the maximum activation limit.
+   *
+   * @param vendor    The Adobe Vendor ID
+   * @param user      The user ID
+   */
+
+  void deleteDeviceActivation(
+    AdobeVendorID vendor,
+    AdobeUserID user);
+
+  /**
    * Get the current list of device activations.
    *
    * @param client The receiver
