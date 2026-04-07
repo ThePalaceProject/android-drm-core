@@ -49,9 +49,9 @@
         <c:change date="2025-10-31T00:00:00+00:00" summary="Add the ability to delete individual device activations."/>
       </c:changes>
     </c:release>
-    <c:release date="2026-04-07T16:49:25+00:00" is-open="true" ticket-system="org.lyrasis.jira" version="4.0.0">
+    <c:release date="2026-04-07T17:27:38+00:00" is-open="false" ticket-system="org.lyrasis.jira" version="4.0.0">
       <c:changes>
-        <c:change date="2026-04-07T16:49:25+00:00" summary="Content protection providers take an Activity instead of an Application."/>
+        <c:change date="2026-04-07T00:00:00+00:00" summary="Content protection providers take an Activity instead of an Application."/>
       </c:changes>
     </c:release>
   </c:releases>
