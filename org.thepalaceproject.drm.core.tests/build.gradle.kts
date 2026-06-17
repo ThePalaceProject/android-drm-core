@@ -1,3 +1,7 @@
+plugins {
+    id("org.thepalaceproject.build.aar")
+}
+
 val dependencyObjects = listOf(
     libs.androidx.test.monitor,
     libs.androidx.test.runner,
@@ -33,6 +37,7 @@ val dependencyObjects = listOf(
     libs.junit.jupiter.vintage,
     libs.junit.platform.commons,
     libs.junit.platform.engine,
+    libs.junit.platform.launcher,
     libs.kotlin.reflect,
     libs.kotlin.stdlib,
     libs.kotlinx.coroutines,
@@ -53,7 +58,6 @@ val dependencyObjects = listOf(
     libs.ow2.asm,
     libs.ow2.asm.commons,
     libs.ow2.asm.tree,
-    libs.palace.drm.core,
     libs.palace.http.api,
     libs.palace.http.downloads,
     libs.palace.http.uri,
@@ -90,6 +94,6 @@ dependencies {
 }
 
 afterEvaluate {
-    tasks.matching { task -> task.name.contains("UnitTest") }
+    tasks.matching { task -> task.name.contains("Test") }
         .forEach { task -> task.enabled = true }
 }

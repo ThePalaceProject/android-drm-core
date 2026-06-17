@@ -6,3 +6,6 @@
 	path = .ci
 	url = https://github.com/ThePalaceProject/android-ci
 	branch = main
+[submodule "palace-build-conventions"]
+	path = palace-build-conventions
+	url = https://github.com/ThePalaceProject/android-build-conventions

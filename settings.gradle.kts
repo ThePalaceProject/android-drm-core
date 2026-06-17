@@ -32,5 +32,7 @@ dependencyResolutionManagement {
     }
 }
 
+includeBuild("palace-build-conventions")
+
 include(":org.thepalaceproject.drm.core")
 include(":org.thepalaceproject.drm.core.tests")
